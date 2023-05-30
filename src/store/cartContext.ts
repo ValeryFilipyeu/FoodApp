@@ -6,6 +6,7 @@ interface CartContextProps {
 	totalAmount: number;
 	addItem: (item: Item) => void;
 	removeItem: (id: string) => void;
+	clearCart: () => void;
 }
 
 const CartContext = React.createContext<CartContextProps>({
@@ -13,6 +14,7 @@ const CartContext = React.createContext<CartContextProps>({
 	totalAmount: 0,
 	addItem: () => {},
 	removeItem: () => {},
+	clearCart: () => {},
 });
 
 export default CartContext;
